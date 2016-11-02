@@ -1,4 +1,6 @@
 import React from 'react'
+import * as actions from '../actions'
+import {bindActionCreators} from 'redux'
 
 class GenreBar extends React.Component{
   constructor(props){
