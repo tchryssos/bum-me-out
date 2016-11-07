@@ -2,6 +2,7 @@ import React from 'react'
 import * as actions from '../actions'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
+import SelectedGenre from './selected-genre'
 
 class GenreBar extends React.Component{
   constructor(props){
@@ -25,7 +26,7 @@ class GenreBar extends React.Component{
           <li><button className="folk-button" onClick={(e)=>{this.setGenre(e)}}>Folk</button></li>
           <li><button className="jazz-button" onClick={(e)=>{this.setGenre(e)}}>Jazz</button></li>
         </ul>
-        <selectedGenre/>
+        <SelectedGenre/>
       </div>
     )
   }
