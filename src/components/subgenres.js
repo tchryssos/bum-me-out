@@ -6,11 +6,29 @@ import {connect} from 'react-redux'
 class SubGenres extends React.Component{
   constructor(props){
     super(props)
+    this.subgenreDisplay=this.subgenreDisplay.bind(this)
+  }
+
+  subgenreDisplay(){
+    switch(this.props.genre){
+      case 'rock':
+        return "ROCK"
+      case 'jazz':
+        return "JAZZ"
+      case 'hip-hop':
+        return "HIP-HOP"
+      case 'folk':
+        return "FOLK"
+      case 'electronic':
+        return "ELECTRONIC"
+      default:
+        break
+    }
   }
 
   render(){
     return(
-      <h1>SUBGENRES</h1>
+      <h1>{this.subgenreDisplay()}</h1>
     )
   }
 }
