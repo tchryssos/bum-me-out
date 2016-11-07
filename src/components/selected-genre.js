@@ -26,11 +26,7 @@ class SelectedGenre extends React.Component{
 }
 
 function mapStateToProps(state, ownProps){
-  if (typeof(state.genre)==="object"){
-    return {genre:"none"}
-  } else {
-    return {genre:state.genre}
-  }
+  return {genre:state.genre}
 }
 
 const componentCreator = connect(mapStateToProps)

@@ -16,11 +16,7 @@ class SubGenres extends React.Component{
 }
 
 function mapStateToProps(state, ownProps){
-  if (typeof(state.genre)==="object"){
-    return {genre:"none"}
-  } else {
     return {genre:state.genre}
-  }
 }
 
 function mapDispatchToProps(dispatch){
