@@ -12,15 +12,45 @@ class SubGenres extends React.Component{
   subgenreDisplay(){
     switch(this.props.genre){
       case 'rock':
-        return "ROCK"
+        return (
+          <div className="rock-subgenre-buttons">
+            <button>Post-Rock</button>
+            <button>Indie</button>
+            <button>Classic Rock</button>
+          </div>
+        )
       case 'jazz':
-        return "JAZZ"
+      return (
+        <div className="jazz-subgenre-buttons">
+          <button>Bossa Nova</button>
+          <button>Bebop</button>
+          <button>Cool Jazz</button>
+        </div>
+      )
       case 'hip-hop':
-        return "HIP-HOP"
+      return (
+        <div className="hip-hop-subgenre-buttons">
+          <button>Jazz Rap</button>
+          <button>Trip-Hop</button>
+          <button>Beats</button>
+        </div>
+      )
       case 'folk':
-        return "FOLK"
+      return (
+        <div className="folk-subgenre-buttons">
+          <button>Classic Folk</button>
+          <button>Indie</button>
+          <button>Acoustic</button>
+        </div>
+      )
       case 'electronic':
-        return "ELECTRONIC"
+      return (
+        <div className="electronic-subgenre-buttons">
+          <button>Ambient</button>
+          <button>Downtempo</button>
+          <button>Chillwave</button>
+        </div>
+      )
       default:
         break
     }
@@ -28,7 +58,9 @@ class SubGenres extends React.Component{
 
   render(){
     return(
-      <h1>{this.subgenreDisplay()}</h1>
+      <div className="subgenre-display">
+      {this.subgenreDisplay()}
+      </div>
     )
   }
 }
