@@ -4,3 +4,10 @@ export function setGenre(genre){
     payload: genre
   }
 }
+
+export function setFilters(subgenre){
+  return {
+    type: "SET_FILTERS",
+    payload: subgenre
+  }
+}

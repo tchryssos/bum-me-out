@@ -4,6 +4,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import SelectedGenre from './selected-genre'
 import SubGenres from './subgenres'
+import SubgenreFilters from "./subgenre-filters"
 
 class GenreBar extends React.Component{
   constructor(props){
@@ -29,6 +30,7 @@ class GenreBar extends React.Component{
         </ul>
         <SubGenres/>
         <SelectedGenre/>
+        <SubgenreFilters/>
       </div>
     )
   }
