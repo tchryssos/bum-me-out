@@ -11,3 +11,10 @@ export function setFilters(subgenre){
     payload: subgenre
   }
 }
+
+export function clearFilters(){
+  return {
+    type: "CLEAR_FILTERS",
+    payload: null
+  }
+}

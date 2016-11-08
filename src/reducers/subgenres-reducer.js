@@ -20,6 +20,8 @@ export default function subgenresReducer(state="none", action){
       } else {
         return stateArr.join(", ")
       }
+    case 'CLEAR_FILTERS':
+      return "none"
     default:
     return state
   }
