@@ -1,7 +1,6 @@
-export default function genreReducer(state={}, action){
+export default function genreReducer(state='none', action){
   switch(action.type){
     case 'SET_GENRE':
-      console.log(action.payload)
       return action.payload
     default:
     return state
