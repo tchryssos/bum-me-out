@@ -14,7 +14,17 @@ class SadnessDisplay extends React.Component{
 
 
 function mapStateToProps(state, ownProps){
-  return {sadness: state.sadness}
+  if (state.sadness < 101){
+    return {sadness: 'Gloomy'}
+  } else if (state.sadness >= 101 && state.sadness < 201){
+    return {sadness: 'Melancholy'}
+  } else if (state.sadness >= 201 && state.sadness < 301){
+    return {sadness: 'Forlorn'}
+  } else if (state.sadness >= 301 && state.sadness < 401){
+    return {sadness: 'Miserable'}
+  } else {
+    return {sadness: 'Depressed'}
+  }
 }
 
 const componentCreator = connect(mapStateToProps)

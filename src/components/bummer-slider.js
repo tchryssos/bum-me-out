@@ -33,13 +33,10 @@ class BummerSlider extends React.Component{
   }
 }
 
-function mapStateToProps(state, ownProps){
-  return {sadness: state.sadness}
-}
 
 function mapDispatchToProps(dispatch){
    return {actions: bindActionCreators(actions, dispatch)}
 }
 
-const componentCreator = connect(mapStateToProps, mapDispatchToProps)
+const componentCreator = connect(null, mapDispatchToProps)
 export default componentCreator(BummerSlider)
