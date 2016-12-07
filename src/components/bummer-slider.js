@@ -7,9 +7,10 @@ import {connect} from 'react-redux'
 import SadnessDisplay from './sadness-display.js'
 
 class BummerSlider extends React.Component{
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.onSliderChange=this.onSliderChange.bind(this)
+    this.props.actions.setSadness(500)
   }
 
   onSliderChange(value){

@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 
 class SadnessDisplay extends React.Component{
   constructor(props){
-    super()
+    super(props)
   }
 
   render(){
