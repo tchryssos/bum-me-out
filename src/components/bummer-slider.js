@@ -4,6 +4,7 @@ import '../styles/slider.css'
 import * as actions from '../actions'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
+import SadnessDisplay from './sadness-display.js'
 
 class BummerSlider extends React.Component{
   constructor(){
@@ -12,7 +13,7 @@ class BummerSlider extends React.Component{
   }
 
   onSliderChange(value){
-    console.log(value)
+    this.props.actions.setSadness(value)
   }
 
   render(){
@@ -25,14 +26,19 @@ class BummerSlider extends React.Component{
       step={1}
       onChange={this.onSliderChange}
       />
+      <SadnessDisplay/>
       </div>
     )
   }
+}
+
+function mapStateToProps(state, ownProps){
+  return {sadness: state.sadness}
 }
 
 function mapDispatchToProps(dispatch){
    return {actions: bindActionCreators(actions, dispatch)}
 }
 
-const componentCreator = connect(null, mapDispatchToProps)
+const componentCreator = connect(mapStateToProps, mapDispatchToProps)
 export default componentCreator(BummerSlider)
