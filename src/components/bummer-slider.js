@@ -7,9 +7,9 @@ class BummerSlider extends React.Component{
     return(
       <div>
       <Slider
-      defaultValue={5}
-      max={10}
-      min={0}
+      defaultValue={500}
+      max={500}
+      min={1}
       step={1}
       />
       </div>
